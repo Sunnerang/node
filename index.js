@@ -29,7 +29,7 @@ app.put('/Entries/:id', (req, res) => {
 })
 app.delete('/Entries/:id', (req, res) => {
     entries = entries.filter(p => p.id != req.params.id)
-    res.send(entries)
+    res.json(entries)
 })
 app.listen(port, () => {
   console.log(`FRA listening on port ${port}`)
